@@ -29,7 +29,7 @@ const benefits = [
 const culture = [
   { stat: "10,000+", label: "Team members & seats" },
   { stat: "15+", label: "Years of growth" },
-  { stat: "5", label: "Delivery centers" },
+  { stat: "9", label: "Delivery centers" },
   { stat: "24/7", label: "Shifts & flexibility" },
 ];
 

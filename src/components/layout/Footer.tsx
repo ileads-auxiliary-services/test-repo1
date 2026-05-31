@@ -22,9 +22,11 @@ export function Footer() {
               <a href={`mailto:${company.contact.email}`} className="flex items-center gap-3 text-slatey-300 hover:text-white">
                 <Mail className="h-4 w-4 text-electric-400" /> {company.contact.email}
               </a>
-              <a href={`tel:${company.contact.phoneHref}`} className="flex items-center gap-3 text-slatey-300 hover:text-white">
-                <Phone className="h-4 w-4 text-electric-400" /> {company.contact.phone}
-              </a>
+              {company.contact.phone && (
+                <a href={`tel:${company.contact.phoneHref}`} className="flex items-center gap-3 text-slatey-300 hover:text-white">
+                  <Phone className="h-4 w-4 text-electric-400" /> {company.contact.phone}
+                </a>
+              )}
               {hq && (
                 <p className="flex items-start gap-3 text-slatey-400">
                   <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-electric-400" /> {hq.address}

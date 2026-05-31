@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Mail, Phone, MapPin, Clock, Briefcase, Users } from "lucide-react";
+import { Mail, Phone, MapPin, Clock, Users } from "lucide-react";
 import { PageHero } from "@/components/ui/PageHero";
 import { ContactForm } from "@/components/sections/ContactForm";
 import { Reveal, Stagger, StaggerItem } from "@/components/ui/Reveal";
@@ -36,10 +36,12 @@ export default function ContactPage() {
               <div className="rounded-3xl border border-slatey-200 bg-white p-7 shadow-soft">
                 <h2 className="font-display text-lg font-semibold text-ink-900">Talk to us</h2>
                 <div className="mt-5 space-y-4 text-sm">
-                  <ContactRow icon={Mail} label="General" value={company.contact.email} href={`mailto:${company.contact.email}`} />
-                  <ContactRow icon={Briefcase} label="Sales" value={company.contact.salesEmail} href={`mailto:${company.contact.salesEmail}`} />
-                  <ContactRow icon={Users} label="Careers" value={company.contact.careersEmail} href={`mailto:${company.contact.careersEmail}`} />
-                  <ContactRow icon={Phone} label="Phone" value={company.contact.phone} href={`tel:${company.contact.phoneHref}`} />
+                  <ContactRow icon={Mail} label="Sales & Enquiries" value={company.contact.salesEmail} href={`mailto:${company.contact.salesEmail}`} />
+                  <ContactRow icon={Users} label="Careers" value={company.contact.careersEmail} href={`mailto:${company.contact.careersEmail}?subject=Career%20Opportunity%20at%20iLeads`} />
+                  {company.contact.phone && (
+                    <ContactRow icon={Phone} label="Phone" value={company.contact.phone} href={`tel:${company.contact.phoneHref}`} />
+                  )}
+                  <ContactRow icon={MapPin} label="Head Office" value={company.locations.find((l) => l.hq)?.address ?? ""} />
                   <ContactRow icon={Clock} label="Hours" value="24/7 delivery · Mon–Sat support" />
                 </div>
               </div>

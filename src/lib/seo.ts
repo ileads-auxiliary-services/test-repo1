@@ -58,9 +58,9 @@ export function organizationSchema() {
     contactPoint: [
       {
         "@type": "ContactPoint",
-        telephone: company.contact.phone,
         contactType: "sales",
-        email: company.contact.email,
+        email: company.contact.salesEmail,
+        ...(company.contact.phone ? { telephone: company.contact.phone } : {}),
         areaServed: "IN",
         availableLanguage: ["en", "hi"],
       },

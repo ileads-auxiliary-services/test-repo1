@@ -54,16 +54,17 @@ export const company = {
     { value: 24, suffix: "/7", label: "Always-On Delivery", detail: "Omnichannel coverage" },
   ],
   contact: {
-    email: "info@ileads.co.in",
-    careersEmail: "careers@ileads.co.in",
+    // Official enquiry address confirmed by iLeads.
+    email: "sales@ileads.co.in",
+    careersEmail: "sales@ileads.co.in",
     salesEmail: "sales@ileads.co.in",
-    phone: "+91 135 451 0000", // TODO: confirm primary number on live contact page
-    phoneHref: "+911354510000",
+    phone: "", // Not published here — enquiries routed via email / contact form.
+    phoneHref: "",
   },
   locations: [
     {
       city: "Dehradun",
-      role: "Headquarters",
+      role: "Head Office",
       state: "Uttarakhand",
       address:
         "Commercial Complex, Behind Kailash Tower, E.C. Road, Dehradun, Uttarakhand 248001",
@@ -86,17 +87,51 @@ export const company = {
       hq: false,
     },
     {
-      city: "Hyderabad",
+      city: "Panchkula",
       role: "Delivery Center",
-      state: "Telangana",
-      address: "Hyderabad, Telangana",
+      state: "Haryana",
+      address:
+        "SCO 112, Midtown Business Park, Peer Muchalla, Near Sector 20, Panchkula, Haryana",
       hq: false,
     },
     {
-      city: "Punjab",
+      city: "Noida",
       role: "Delivery Center",
-      state: "Punjab",
-      address: "Punjab, India",
+      state: "Uttar Pradesh",
+      address:
+        "A22, Sector 16, Near Sector 16 Metro Station, Noida, Uttar Pradesh 201301",
+      hq: false,
+    },
+    {
+      city: "Bengaluru",
+      role: "Delivery Center",
+      state: "Karnataka",
+      address:
+        "Maruthi Chambers, Ground Floor, Silk Board Junction, Bommanahalli, Bengaluru, Karnataka",
+      hq: false,
+    },
+    {
+      city: "Trivandrum",
+      role: "Delivery Center",
+      state: "Kerala",
+      address:
+        "New Bharath Towers, 2nd Floor, TC No. 86/1424(3), Chakkai Bypass, Trivandrum, Kerala",
+      hq: false,
+    },
+    {
+      city: "Puducherry",
+      role: "On-Site Delivery",
+      state: "Puducherry",
+      address:
+        "Government of Puducherry Electricity Department, 137 Nethaji Subhash Chandra Bose Salai, Puducherry 605001",
+      hq: false,
+    },
+    {
+      city: "Navi Mumbai",
+      role: "Delivery Center",
+      state: "Maharashtra",
+      address:
+        "3rd Floor, Allied Digital House, A4, Millennium Business Park, Navi Mumbai, Maharashtra 400710",
       hq: false,
     },
   ],
