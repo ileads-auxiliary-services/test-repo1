@@ -157,39 +157,49 @@ export const company = {
     facebook: "https://www.facebook.com/ileadsworld/",
   },
   mission:
-    "To help enterprises and governments deliver effortless, intelligent customer experiences by uniting world-class people with AI-driven process automation.",
+    "Our mission is growth — our clients' and our own. We take on the heavy lifting of mission-critical support operations so our clients can focus on their core business, confident that every process behind their expansion is delivered by experts and amplified by AI.",
   vision:
-    "To be India's most trusted AI-powered BPM and Customer Experience partner — recognized globally for operational excellence, security, and measurable business outcomes.",
+    "To be recognized as a trusted, AI-powered partner that consistently delivers high-quality, outcome-driven services — on time, at the right cost, and at enterprise scale — for every client we serve.",
   values: [
     {
-      title: "Outcomes Over Activity",
+      title: "Quality",
       description:
-        "We are measured by the business results we create — CSAT, conversion, cost-to-serve — not the hours we bill.",
+        "We engineer a zero-error environment and never trade quality for volume. Cost efficiency and uncompromising standards go hand in hand in everything we deliver.",
     },
     {
-      title: "Security by Default",
+      title: "Efficiency",
       description:
-        "ISO 27001-aligned controls protect every customer interaction and every byte of data we are entrusted with.",
+        "We respect our clients' time. Every engagement is run to be time-conscious and disciplined, delivering dependable results within agreed timelines.",
     },
     {
-      title: "Human + Machine",
+      title: "Open-Mindedness",
       description:
-        "We deploy AI where it amplifies people, freeing experts to handle moments that matter most.",
+        "We pursue continuous improvement — staying receptive to feedback, suggestions, and the insight of every partner to keep raising the bar.",
     },
     {
-      title: "Relentless Quality",
+      title: "Equality & Respect",
       description:
-        "ISO 9001 process discipline and continuous coaching keep our delivery consistent at scale.",
+        "We treat clients, leadership, and associates with equal respect, because a positive, productive culture is the foundation of great delivery.",
     },
     {
-      title: "People First",
+      title: "Integrity",
       description:
-        "We invest in careers, learning, and culture — because engaged teams deliver exceptional experiences.",
+        "Honesty, reliability, trust, and accountability guide every interaction. Our teams uphold these principles in every transaction they touch.",
     },
     {
-      title: "Partnership Mindset",
+      title: "Confidentiality",
       description:
-        "We embed with our clients as an extension of their brand, not a transactional vendor.",
+        "Robust non-disclosure agreements and ISO 27001-aligned controls protect our clients' data and privacy across every process we run.",
+    },
+    {
+      title: "Teamwork",
+      description:
+        "Individuals come together as one strong unit, combining diverse expertise to achieve every objective without compromising quality.",
+    },
+    {
+      title: "Responsibility",
+      description:
+        "We own our performance and outcomes, using clear targets to relentlessly meet and exceed the goals we set with our clients.",
     },
   ],
   timeline: [

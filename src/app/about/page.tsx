@@ -38,20 +38,23 @@ export default function AboutPage() {
             </h2>
             <div className="mt-6 space-y-4 text-slatey-600">
               <p>
-                Founded in 2010 in Dehradun, iLeads began as a focused data and call-processing team
-                with an outsized ambition: to prove that world-class customer operations could be
-                delivered from the heart of Uttarakhand.
+                Founded in 2010 in Dehradun, iLeads began as a focused data, business, and
+                call-processing team with an outsized ambition: to prove that world-class customer
+                operations could be delivered from the heart of Uttarakhand. Today we are among the
+                fastest-growing BPO, KPO, and ITES companies in the nation.
               </p>
               <p>
-                Over fifteen years, we have grown into a PAN-India business process management
+                Over fifteen years we have grown into a PAN-India business process management
                 partner — incorporated as iLeads Auxiliary Services Pvt. Ltd., recognized by Startup
                 India and Startup Uttarakhand, and honored as Best Start Up 2020 by the Chamber of
                 Commerce & Industry of India.
               </p>
               <p>
-                Today, iLeads operates as an AI-powered BPM and Customer Experience partner — uniting
-                10,000+ skilled professionals with intelligent automation, certified security, and a
-                relentless focus on the outcomes our clients care about most.
+                We operate on best-in-class infrastructure with 10,000+ seats and more than 10,000
+                people — highly qualified leadership working alongside our most skilled associates —
+                offering exclusive, end-to-end outsourcing support to every client. Now, by uniting
+                that talent with intelligent automation, certified security, and a relentless focus
+                on outcomes, iLeads delivers as an AI-powered BPM and Customer Experience partner.
               </p>
             </div>
           </div>
