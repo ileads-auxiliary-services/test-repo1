@@ -58,8 +58,8 @@ export const company = {
     email: "sales@ileads.co.in",
     careersEmail: "sales@ileads.co.in",
     salesEmail: "sales@ileads.co.in",
-    phone: "", // Not published here — enquiries routed via email / contact form.
-    phoneHref: "",
+    phone: "+91 96544 93414",
+    phoneHref: "+919654493414",
   },
   locations: [
     {
