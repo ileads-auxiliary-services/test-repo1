@@ -14,7 +14,7 @@ export function Footer() {
       <div className="container-tight relative pt-20">
         <div className="grid gap-12 lg:grid-cols-[1.4fr_1fr_1fr_1fr]">
           <div>
-            <Logo variant="light" />
+            <Logo variant="light" showTagline />
             <p className="mt-5 max-w-sm text-sm leading-relaxed text-slatey-400">
               {company.shortDescription}
             </p>

@@ -35,7 +35,7 @@ export function Header() {
       )}
     >
       <div className="container-tight flex h-[72px] items-center justify-between gap-6">
-        <Logo />
+        <Logo variant={scrolled ? "dark" : "light"} />
 
         <nav className="hidden items-center gap-1 lg:flex" onMouseLeave={() => setOpenMenu(null)}>
           {primaryNav.map((item) => {
@@ -44,7 +44,10 @@ export function Header() {
               <div key={item.label} className="relative" onMouseEnter={() => setOpenMenu(hasChildren ? item.label : null)}>
                 <Link
                   href={item.href}
-                  className="inline-flex items-center gap-1 rounded-full px-4 py-2 text-sm font-medium text-slatey-700 transition-colors hover:text-ink-900"
+                  className={cn(
+                    "inline-flex items-center gap-1 rounded-full px-4 py-2 text-sm font-medium transition-colors",
+                    scrolled ? "text-slatey-700 hover:text-ink-900" : "text-slatey-200 hover:text-white",
+                  )}
                 >
                   {item.label}
                   {hasChildren && <ChevronDown className="h-3.5 w-3.5 opacity-60" />}
@@ -91,7 +94,10 @@ export function Header() {
         </div>
 
         <button
-          className="grid h-10 w-10 place-items-center rounded-xl border border-slatey-200 text-ink-900 lg:hidden"
+          className={cn(
+            "grid h-10 w-10 place-items-center rounded-xl border lg:hidden",
+            scrolled || open ? "border-slatey-200 text-ink-900" : "border-white/20 text-white",
+          )}
           onClick={() => setOpen((v) => !v)}
           aria-label="Toggle menu"
         >

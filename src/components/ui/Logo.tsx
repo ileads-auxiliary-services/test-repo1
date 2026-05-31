@@ -1,20 +1,62 @@
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 
-export function Logo({ variant = "dark", className }: { variant?: "dark" | "light"; className?: string }) {
-  const text = variant === "light" ? "text-white" : "text-ink-900";
+/**
+ * iLeads brand lockup, recreated as a scalable SVG so it renders crisply on any
+ * background. The coral/magenta "dotted-i" mark is constant; the wordmark colour
+ * adapts to light/dark surfaces. Drop in the official asset at /public/logo.svg
+ * and swap the <LogoMark/> for an <img> if a pixel-exact file is preferred.
+ */
+export function LogoMark({ className }: { className?: string }) {
   return (
-    <Link href="/" className={cn("group inline-flex items-center gap-2.5", className)} aria-label="iLeads home">
-      <span className="relative grid h-9 w-9 place-items-center rounded-xl bg-gradient-to-br from-electric-400 to-navy-600 shadow-[0_8px_20px_-8px_rgba(6,180,242,0.8)]">
-        <span className="absolute inset-0 rounded-xl ring-1 ring-inset ring-white/20" />
-        <svg viewBox="0 0 24 24" className="h-5 w-5 text-white" fill="none" aria-hidden>
-          <path d="M5 14c2.5 0 3.5-2 7-2s4.5 2 7 2" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" />
-          <circle cx="12" cy="6.5" r="1.8" fill="currentColor" />
-          <path d="M6 18.5h12" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" opacity="0.6" />
-        </svg>
-      </span>
-      <span className={cn("font-display text-xl font-bold tracking-tight", text)}>
-        i<span className="text-electric-500">Leads</span>
+    <svg viewBox="0 0 44 46" className={cn("h-9 w-auto shrink-0", className)} fill="none" aria-hidden role="img">
+      <defs>
+        <linearGradient id="ileads-coral" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0" stopColor="#F7791F" />
+          <stop offset="1" stopColor="#F24A1E" />
+        </linearGradient>
+        <linearGradient id="ileads-pink" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0" stopColor="#F0247A" />
+          <stop offset="1" stopColor="#D2197E" />
+        </linearGradient>
+      </defs>
+      {/* left dotted-i */}
+      <circle cx="9" cy="7" r="6" fill="#ED1C24" />
+      <rect x="3" y="16" width="12" height="27" rx="6" fill="url(#ileads-coral)" />
+      {/* right dotted-i */}
+      <circle cx="27" cy="7" r="6" fill="#ED1C24" />
+      <rect x="21" y="16" width="12" height="27" rx="6" fill="url(#ileads-pink)" />
+    </svg>
+  );
+}
+
+export function Logo({
+  variant = "dark",
+  className,
+  showTagline = false,
+}: {
+  variant?: "dark" | "light";
+  className?: string;
+  showTagline?: boolean;
+}) {
+  const word = variant === "light" ? "text-white" : "text-ink-900";
+  const tag = variant === "light" ? "text-slatey-300" : "text-slatey-500";
+  return (
+    <Link
+      href="/"
+      aria-label="iLeads — Auxiliary Services Pvt Ltd, home"
+      className={cn("group inline-flex items-center gap-2.5", className)}
+    >
+      <LogoMark className="transition-transform duration-300 group-hover:-translate-y-0.5" />
+      <span className="flex flex-col leading-none">
+        <span className={cn("font-display text-2xl font-extrabold lowercase tracking-tight", word)}>
+          ileads
+        </span>
+        {showTagline && (
+          <span className={cn("mt-1 text-[9px] font-semibold uppercase tracking-[0.2em]", tag)}>
+            Auxiliary Services Pvt Ltd
+          </span>
+        )}
       </span>
     </Link>
   );
