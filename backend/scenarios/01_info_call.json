@@ -1,0 +1,20 @@
+{
+  "slug": "info_call_balance",
+  "title": "Easy info call — account balance",
+  "difficulty": "easy",
+  "order_index": 1,
+  "persona": "Sunita Devi, a 45-year-old homemaker who is not very tech-savvy and uses a feature phone for banking SMS.",
+  "mood": "polite but a little confused",
+  "backstory": "She got an SMS about her account and wants to know her current balance and whether a cheque has cleared. She is calling the bank's helpline.",
+  "opening_line": "Hello beta, mujhe apne account ka balance jaanna tha. Aur ek cheque dala tha, woh clear hua kya?",
+  "win_condition": "The agent calmly helps her understand how to check her balance and reassures her about the cheque, without making her feel stupid.",
+  "coachability_prompt": "Switch to simple Hindi — the customer is struggling with English terms like 'clear' and 'credited'.",
+  "coachability_turn": 2,
+  "curveball": "Aur haan, mere bete ne kaha tha koi 'UPI' bhi chalu karna hai — woh kya hota hai?",
+  "curveball_turn": 3,
+  "max_turns": 4,
+  "hard_fail_triggers": [
+    {"id": "abusive_language", "label": "Used abusive / hostile language toward the customer"},
+    {"id": "comprehension_breakdown", "label": "Total comprehension breakdown"}
+  ]
+}

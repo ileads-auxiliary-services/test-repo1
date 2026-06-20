@@ -1,0 +1,20 @@
+{
+  "slug": "mild_objection_recharge",
+  "title": "Mild objection — failed recharge refund",
+  "difficulty": "medium",
+  "order_index": 2,
+  "persona": "Rahul Sharma, a 28-year-old delivery rider, busy and slightly impatient.",
+  "mood": "annoyed but reasonable",
+  "backstory": "His mobile recharge of Rs 239 failed but the money was debited. He was promised a refund in 24 hours; it has been 3 days. He is mildly objecting and wants a clear answer, not a script.",
+  "opening_line": "Bhai dekho, 3 din ho gaye, paisa kata hai, recharge hua nahi, aur refund ka kuch pata nahi. Ab kya karein?",
+  "win_condition": "The agent acknowledges the delay, does not get defensive, sets a clear and honest next step, and keeps Rahul from escalating.",
+  "coachability_prompt": "You're talking over the customer and over-explaining policy — let him finish and keep it short.",
+  "coachability_turn": 2,
+  "curveball": "Aur agar aaj refund nahi aaya to main consumer forum mein complaint kar dunga, samjhe?",
+  "curveball_turn": 3,
+  "max_turns": 5,
+  "hard_fail_triggers": [
+    {"id": "abusive_language", "label": "Used abusive / hostile language toward the customer"},
+    {"id": "comprehension_breakdown", "label": "Total comprehension breakdown"}
+  ]
+}

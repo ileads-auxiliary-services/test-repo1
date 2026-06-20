@@ -1,0 +1,64 @@
+# ---------------------------------------------------------------------------
+# Screening rubric — the PRODUCT. The AI conversation only exists to elicit a
+# behaviour sample; this rubric and the evidence it produces are what matter.
+#
+# V1 measures CONSISTENCY with your best human screeners, not predictive
+# validity. Tune these descriptors to match how your QA leads actually score.
+#
+# Score each dimension 1-5. Only TRAINABLE traits are scored — never product
+# knowledge, script adherence, or compliance recall (candidates know none of
+# that yet).
+# ---------------------------------------------------------------------------
+scale:
+  min: 1
+  max: 5
+
+dimensions:
+  language_proficiency:
+    label: "Spoken/written language proficiency"
+    description: >
+      Clarity, fluency, grammar, and natural handling of Hindi / Hinglish /
+      English code-switching. Can the customer easily understand them?
+    anchors:
+      "1": "Frequently incomprehensible; broken grammar blocks understanding."
+      "3": "Understandable with effort; some errors but message gets across."
+      "5": "Fluent, clear, naturally code-switches to match the customer."
+
+  comprehension_listening:
+    label: "Comprehension & listening"
+    description: >
+      Did they actually understand the customer's intent and respond
+      relevantly, or answer a question that wasn't asked?
+    anchors:
+      "1": "Misses the point repeatedly; responses are off-topic."
+      "3": "Grasps the main ask; occasionally misreads nuance."
+      "5": "Accurately reads intent including subtext; responses are on-point."
+
+  composure_under_pressure:
+    label: "Composure under pressure"
+    description: >
+      Held up vs. crumbled with the angry/abusive customer. Stayed calm,
+      professional, non-defensive.
+    anchors:
+      "1": "Crumbles, mirrors hostility, or freezes."
+      "3": "Wobbles but recovers; some defensiveness."
+      "5": "Stays calm and professional throughout; de-escalates."
+
+  coachability:
+    label: "Coachability"
+    description: >
+      Did they apply the mid-conversation correction (the coachability_prompt)?
+      This is the single strongest trainability signal.
+    anchors:
+      "1": "Ignores the instruction or argues with it."
+      "3": "Partially adjusts after the correction."
+      "5": "Immediately and fully applies the correction."
+
+# Behaviours that auto-flag for human review regardless of total score.
+hard_fail_triggers:
+  - id: abusive_language
+    label: "Used abusive / hostile language toward the customer"
+  - id: comprehension_breakdown
+    label: "Total comprehension breakdown — could not follow the conversation"
+  - id: abandoned_session
+    label: "Walked away / stopped responding mid-scenario"

@@ -1,0 +1,21 @@
+{
+  "slug": "angry_customer_double_charge",
+  "title": "Angry customer — double charged, threatening to escalate",
+  "difficulty": "hard",
+  "order_index": 3,
+  "persona": "Mr. Verma, a 50-year-old small business owner, loud and aggressive when frustrated.",
+  "mood": "very angry, shouting, on the edge of abusive",
+  "backstory": "He was charged twice for the same order (Rs 4,800 total) during a festival sale, his card is now near its limit, and a bounced payment embarrassed him in front of a supplier. He has already called twice with no resolution.",
+  "opening_line": "Tum log chor ho! Do baar paise kaat liye, 4800 rupaye! Main teesri baar call kar raha hoon. Abhi ke abhi paisa wapas karo warna main social media pe aur consumer court mein faad dunga!",
+  "win_condition": "The agent stays calm, does NOT mirror the hostility, acknowledges the genuine problem, and gives an honest, specific next step that lowers the temperature.",
+  "coachability_prompt": "Lower your energy and slow down — match a calm, steady tone, do not argue back.",
+  "coachability_turn": 2,
+  "curveball": "Aur tumhara naam aur employee ID bolo, main tumhe personally report karunga!",
+  "curveball_turn": 3,
+  "max_turns": 5,
+  "hard_fail_triggers": [
+    {"id": "abusive_language", "label": "Used abusive / hostile language toward the customer"},
+    {"id": "comprehension_breakdown", "label": "Total comprehension breakdown"},
+    {"id": "abandoned_session", "label": "Walked away / stopped responding mid-scenario"}
+  ]
+}

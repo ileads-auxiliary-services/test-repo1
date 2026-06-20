@@ -1,0 +1,29 @@
+# ---------------------------------------------------------------------------
+# Decision thresholds — config-driven so they can be tuned without code changes.
+#
+# CORE FAIRNESS RULE (enforced in code, not just here): the tool NEVER issues a
+# final auto-reject. "reject" below means "recommend not advancing" — it and
+# every Borderline / hard-fail case is routed to a human, who decides.
+# ---------------------------------------------------------------------------
+
+# Weighted average of the four 1-5 dimension scores.
+weights:
+  language_proficiency: 1.0
+  comprehension_listening: 1.0
+  composure_under_pressure: 1.0
+  coachability: 1.0
+
+# Banding on the weighted average (1-5 scale).
+thresholds:
+  recommend_min: 3.75   # >= this  -> Recommend
+  reject_max: 2.50      # <  this  -> Reject (advisory; still human-reviewable)
+  # Anything in between [reject_max, recommend_min) -> Borderline.
+
+# A single dimension at or below this floor forces Borderline at best,
+# even if the average is high (e.g. fluent but crumbles under pressure).
+critical_floor: 2
+
+# Borderline and hard-fail always require human review.
+human_review:
+  on_borderline: true
+  on_hard_fail: true
